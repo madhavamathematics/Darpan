@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शक्ति, क्षमा और मनुष्यता — कुछ विनम्र प्रश्न</title>
+
+    <!-- Google Fonts for Devanagari -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #fdfaf4;
+            --paper: #ffffff;
+            --text: #2c2416;
+            --text-light: #5c4f3b;
+            --text-muted: #8a7b66;
+            --accent: #8b4513;
+            --accent-soft: #c4956a;
+            --accent-pale: #f5ede3;
+            --border: #e0d5c5;
+            --gold: #b8944b;
+            --gold-light: #f0e6d3;
+            --shadow: 0 2px 20px rgba(60, 30, 10, 0.06);
+            --shadow-lg: 0 8px 40px rgba(60, 30, 10, 0.10);
+            --radius: 6px;
+            --radius-lg: 12px;
+            --transition: 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 17px;
+        }
+
+        body {
+            background-color: #f5f0e8;
+            background-image:
+                radial-gradient(ellipse at 20% 10%, rgba(180, 140, 80, 0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 90%, rgba(140, 100, 50, 0.03) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 50%, rgba(180, 150, 100, 0.02) 0%, transparent 70%);
+            font-family: 'Noto Sans Devanagari', 'Noto Serif Devanagari', serif;
+            color: var(--text);
+            line-height: 1.85;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem 4rem;
+        }
+
+        /* ── Main Container ────────────────────── */
+        .container {
+            max-width: 780px;
+            width: 100%;
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 3.5rem 3rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative top bar */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg,
+                    var(--accent-soft) 0%,
+                    var(--gold) 30%,
+                    var(--accent) 60%,
+                    var(--accent-soft) 100%);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+
+        /* ── Header ──────────────────────────── */
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 1.5rem;
+        }
+
+        .article-header .kicker {
+            display: inline-block;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent-soft);
+            margin-bottom: 0.8rem;
+            border-bottom: 1.5px solid var(--accent-pale);
+            padding-bottom: 0.5rem;
+            padding-inline: 1.2rem;
+        }
+
+        .article-header h1 {
+            font-family: 'Noto Serif Devanagari', 'EB Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #3b2610;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.01em;
+        }
+
+        .article-header .subtitle {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .header-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.6rem auto 0;
+            border-radius: 2px;
+            opacity: 0.7;
+        }
+
+        /* ── Section Title ───────────────────── */
+        h2 {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #3b2610;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.55rem;
+            border-bottom: 1.5px solid var(--border);
+            position: relative;
+            letter-spacing: 0.01em;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1.5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-soft);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4a3020;
+            margin-top: 2rem;
+            margin-bottom: 0.7rem;
+        }
+
+        /* ── Paragraphs ──────────────────────── */
+        p {
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+            color: var(--text);
+            text-align: justify;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+        }
+
+        p.lead {
+            font-size: 1.12rem;
+            line-height: 1.9;
+            color: #3b2610;
+            font-weight: 400;
+        }
+
+        /* ── Blockquote / Pull Quote ─────────── */
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.6rem 2rem;
+            background: var(--accent-pale);
+            border-left: 4px solid var(--accent-soft);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-family: 'Noto Serif Devanagari', serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #4a3020;
+            line-height: 1.75;
+            position: relative;
+            letter-spacing: 0.01em;
+            font-style: italic;
+        }
+
+        blockquote::before {
+            content: '"';
+            position: absolute;
+            top: 0.6rem;
+            left: 0.8rem;
+            font-size: 4rem;
+            color: var(--accent-soft);
+            opacity: 0.22;
+            font-family: 'EB Garamond', 'Noto Serif Devanagari', serif;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        blockquote p {
+            margin-bottom: 0.4rem;
+            color: #4a3020;
+        }
+
+        blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Highlighted box ─────────────────── */
+        .insight-box {
+            background: #fdf9f2;
+            border: 1px solid var(--gold-light);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem 2rem;
+            margin: 2.2rem 0;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(180, 140, 80, 0.08);
+        }
+
+        .insight-box .label {
+            display: inline-block;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent-soft);
+            margin-bottom: 0.7rem;
+        }
+
+        .insight-box p {
+            color: #4a3020;
+            font-weight: 400;
+        }
+
+        .insight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Dual Cards ──────────────────────── */
+        .dual-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: #fdfaf5;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            border-color: var(--accent-soft);
+        }
+
+        .card .card-number {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 50%;
+            background: var(--accent-pale);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card h4 {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #3b2610;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        /* ── List ────────────────────────────── */
+        .reflective-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .reflective-list li {
+            position: relative;
+            padding: 0.65rem 0 0.65rem 2rem;
+            color: var(--text);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .reflective-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            color: var(--accent-soft);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* ── Conclusion separator ────────────── */
+        .ornament-divider {
+            text-align: center;
+            margin: 2.5rem 0 2rem;
+            color: var(--accent-soft);
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            opacity: 0.6;
+            user-select: none;
+        }
+
+        /* ── Footer ──────────────────────────── */
+        .article-footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.03em;
+        }
+
+        .article-footer .tag {
+            display: inline-block;
+            background: var(--accent-pale);
+            color: var(--accent);
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            margin: 0 0.25rem 0.4rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Responsive ──────────────────────── */
+        @media (max-width: 700px) {
+            html {
+                font-size: 15.5px;
+            }
+            .container {
+                padding: 2rem 1.5rem 2.5rem;
+                border-radius: var(--radius);
+            }
+            .container::before {
+                border-radius: var(--radius) var(--radius) 0 0;
+            }
+            .article-header h1 {
+                font-size: 1.9rem;
+            }
+            blockquote {
+                padding: 1.2rem 1.4rem;
+                font-size: 1rem;
+            }
+            blockquote::before {
+                font-size: 2.8rem;
+                top: 0.3rem;
+                left: 0.4rem;
+            }
+            .dual-cards {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .insight-box {
+                padding: 1.2rem 1.3rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            html {
+                font-size: 14px;
+            }
+            .container {
+                padding: 1.5rem 1rem 2rem;
+            }
+            .article-header h1 {
+                font-size: 1.6rem;
+            }
+            blockquote {
+                padding: 1rem 1.1rem;
+                font-size: 0.95rem;
+            }
+            blockquote::before {
+                font-size: 2.2rem;
+                top: 0.2rem;
+                left: 0.3rem;
+            }
+            p {
+                text-align: left;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 1.5rem 2rem;
+            }
+            .container::before {
+                height: 2px;
+                background: #000;
+            }
+            blockquote {
+                background: #fafafa;
+                border-left-color: #888;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <article class="container">
+
+        <!-- ─── Header ──────────────────────────── -->
+        <header class="article-header">
+            <span class="kicker">एक चिंतनपरक निबंध</span>
+            <h1>शक्ति, क्षमा और मनुष्यता</h1>
+            <p class="subtitle">शक्ति का सम्मान करते हुए भी — कुछ विनम्र प्रश्न</p>
+            <div class="header-divider"></div>
+        </header>
+
+        <!-- ─── प्रस्तावना ──────────────────────── -->
+        <h2>प्रस्तावना</h2>
+
+        <p class="lead">
+            मानव इतिहास में शक्ति का स्थान सदैव महत्वपूर्ण रहा है। राज्यों ने अपनी रक्षा के लिए शक्ति अर्जित की, समाजों ने अपने अस्तित्व के लिए संघर्ष किया, और व्यक्तियों ने अपने सपनों को साकार करने के लिए साहस दिखाया। इसी कारण लगभग हर सभ्यता में ऐसे वाक्य और कथन मिलते हैं जो वीरता, साहस और सामर्थ्य का गुणगान करते हैं।
+        </p>
+
+        <p>
+            भारतीय परंपरा में भी ऐसे दो प्रसिद्ध कथन हैं—
+        </p>
+
+        <blockquote>
+            <p>"वीर भोग्या वसुंधरा"</p>
+            <p>और</p>
+            <p>"क्षमा शोभती उस भुजंग को जिसके पास गरल हो।"</p>
+        </blockquote>
+
+        <p>
+            इन दोनों कथनों में एक गहरी चिंता दिखाई देती है—यदि व्यक्ति या समाज अपनी रक्षा करने में असमर्थ हो जाए, तो उसकी उदारता और शांति को कभी-कभी कमज़ोरी समझ लिया जाता है।
+        </p>
+
+        <p>
+            यह चिंता निराधार नहीं है। इतिहास में ऐसे अनेक उदाहरण मिलते हैं जहाँ शक्ति के अभाव ने समुदायों को असुरक्षित बना दिया। फिर भी, यदि हम इन विचारों को गंभीरता से स्वीकार करते हैं, तो कुछ ऐसे प्रश्न भी सामने आते हैं जिन पर शांतिपूर्वक विचार करना उपयोगी हो सकता है।
+        </p>
+
+        <div class="ornament-divider">✦ ✦ ✦</div>
+
+        <!-- ─── पहला प्रश्न ────────────────────── -->
+        <h2>पहला प्रश्न</h2>
+        <h3>क्या क्षमा का मूल्य केवल शक्ति से आता है?</h3>
+
+        <p>
+            यदि कोई शक्तिशाली व्यक्ति प्रतिशोध लेने में सक्षम होने के बावजूद क्षमा करता है, तो यह निस्संदेह एक प्रकार की महानता है।
+        </p>
+
+        <p>
+            लेकिन क्या यही क्षमा का एकमात्र रूप है?
+        </p>
+
+        <p>
+            मान लीजिए कोई व्यक्ति असहाय है। वह किसी अन्याय का शिकार हुआ है। उसके पास प्रतिकार करने की क्षमता नहीं है। फिर भी वह घृणा को अपने जीवन का केंद्र नहीं बनने देता।
+        </p>
+
+        <div class="insight-box">
+            <span class="label">विचारणीय</span>
+            <p>क्या उसकी क्षमा कम मूल्यवान है? इतिहास में ऐसे असंख्य लोग हुए हैं जिन्होंने अत्याचार सहा, अपमान झेला, प्रियजनों को खोया—फिर भी मनुष्य बने रहे। उनके पास शक्ति नहीं थी, लेकिन उनके पास आंतरिक धैर्य और करुणा थी। क्या यह भी एक प्रकार की महानता नहीं है?</p>
+        </div>
+
+        <!-- ─── दूसरा प्रश्न ────────────────────── -->
+        <h2>दूसरा प्रश्न</h2>
+        <h3>क्या हर प्रकार की वीरता विजय में दिखाई देती है?</h3>
+
+        <p>
+            हम अक्सर वीरता को जीत से जोड़ते हैं। युद्ध जीतना। प्रतिस्पर्धा जीतना। सत्ता प्राप्त करना। विजय प्राप्त करना।
+        </p>
+
+        <p>
+            लेकिन क्या हारते हुए भी मनुष्य बने रहना वीरता नहीं है?
+        </p>
+
+        <ul class="reflective-list">
+            <li>एक सैनिक रणभूमि में वीर हो सकता है। लेकिन एक कैदी जो यातना के बीच भी अपनी गरिमा बचाए रखता है, क्या वह वीर नहीं है?</li>
+            <li>एक शासक साम्राज्य स्थापित कर सकता है। लेकिन एक व्यक्ति जो भय और अपमान के बीच भी सत्य बोलता है, क्या उसमें वीरता नहीं है?</li>
+        </ul>
+
+        <p>
+            शायद वीरता के अनेक रूप होते हैं, और उनमें से सभी विजय से जुड़े नहीं होते।
+        </p>
+
+        <!-- ─── तीसरा प्रश्न ────────────────────── -->
+        <h2>तीसरा प्रश्न</h2>
+        <h3>पृथ्वी किसकी है?</h3>
+
+        <p>
+            "वीर भोग्या वसुंधरा" एक प्रेरणादायक वाक्य है। यह हमें कर्म, साहस और पहल का महत्व याद दिलाता है। लेकिन यदि हम इस वाक्य को अंतिम सत्य मान लें, तो एक कठिन प्रश्न सामने आता है।
+        </p>
+
+        <p><strong>पृथ्वी केवल वीरों की है? या उन लोगों की भी जो स्वयं की रक्षा नहीं कर सकते?</strong></p>
+
+        <p>नवजात शिशु। वृद्ध व्यक्ति। बीमार व्यक्ति। विकलांग व्यक्ति। साधारण नागरिक। इनकी जगह कहाँ है?</p>
+
+        <div class="insight-box">
+            <span class="label">सभ्यता की कसौटी</span>
+            <p>सभ्यता का मूल्य केवल इस बात से नहीं मापा जाता कि वह अपने शक्तिशाली नागरिकों के साथ कैसा व्यवहार करती है। उसका मूल्य इस बात से भी मापा जाता है कि वह अपने सबसे कमज़ोर नागरिकों के साथ कैसा व्यवहार करती है।</p>
+        </div>
+
+        <!-- ─── चौथा प्रश्न ────────────────────── -->
+        <h2>चौथा प्रश्न</h2>
+        <h3>शक्ति का उद्देश्य क्या है?</h3>
+
+        <p>
+            शक्ति एक साधन है। उसका महत्व इस बात से तय होता है कि उसका उपयोग किस लिए किया जाता है।
+        </p>
+
+        <p>
+            एक तलवार रक्षा भी कर सकती है और आक्रमण भी। एक सेना सुरक्षा भी दे सकती है और भय भी उत्पन्न कर सकती है। एक राज्य नागरिकों की रक्षा भी कर सकता है और उन पर अत्याचार भी कर सकता है।
+        </p>
+
+        <p>
+            इसलिए शायद सबसे महत्वपूर्ण प्रश्न यह नहीं है कि <em>शक्ति है या नहीं।</em> सबसे महत्वपूर्ण प्रश्न यह है कि—
+        </p>
+
+        <blockquote>
+            <p>शक्ति किसके लिए है?<br>क्या शक्ति केवल अपने विस्तार के लिए है?<br>या वह उन लोगों की रक्षा के लिए है जो स्वयं अपनी रक्षा नहीं कर सकते?</p>
+        </blockquote>
+
+        <!-- ─── पाँचवाँ प्रश्न ────────────────────── -->
+        <h2>पाँचवाँ प्रश्न</h2>
+        <h3>यदि शक्ति चली जाए तो क्या बचेगा?</h3>
+
+        <p>
+            कल्पना कीजिए कि किसी व्यक्ति से उसका पद, प्रतिष्ठा, धन, प्रभाव और अधिकार—सब छिन जाए। तब क्या बचेगा?
+        </p>
+
+        <p>
+            यदि कुछ भी नहीं बचता, तो संभव है कि उसकी पहचान पूरी तरह शक्ति पर आधारित थी। लेकिन यदि तब भी सत्यनिष्ठा, करुणा, साहस, सम्मान और मानवीय गरिमा बची रहती है—तो शक्ति उसके व्यक्तित्व का केंद्र नहीं थी। <strong>वह केवल एक साधन थी।</strong>
+        </p>
+
+        <div class="ornament-divider">✦ ✦ ✦</div>
+
+        <!-- ─── शक्ति और पीड़ा ──────────────────── -->
+        <h2>शक्ति और पीड़ा: दो प्रकार की महानता</h2>
+
+        <p>
+            मानव इतिहास में कम-से-कम <strong>दो प्रकार की महानता</strong> दिखाई देती है।
+        </p>
+
+        <div class="dual-cards">
+            <div class="card">
+                <span class="card-number">१</span>
+                <h4>शक्ति के साथ संयम</h4>
+                <p>पहली महानता वह है जो शक्ति होने पर भी संयम दिखाती है। यह हमें सिखाती है कि शक्तिशाली होकर विनम्र कैसे रहें।</p>
+            </div>
+            <div class="card">
+                <span class="card-number">२</span>
+                <h4>असहायता में मनुष्यता</h4>
+                <p>दूसरी महानता वह है जो शक्ति न होने पर भी मनुष्यता बचाए रखती है। यह हमें सिखाती है कि असहाय होकर भी मानवीय कैसे रहें।</p>
+            </div>
+        </div>
+
+        <p>
+            दोनों की अपनी गरिमा है। दोनों की अपनी कठिनाइयाँ हैं। दोनों की अपनी आवश्यकता है। एक समाज को दोनों प्रकार की महानता की आवश्यकता होती है—न केवल जीतने वालों की, बल्कि सहने वालों की भी; न केवल शासकों की, बल्कि उनकी भी जो चुपचाप अपना कर्तव्य निभाते हैं और मनुष्य बने रहते हैं।
+        </p>
+
+        <div class="ornament-divider">— ✦ —</div>
+
+        <!-- ─── उपसंहार ──────────────────────────── -->
+        <h2>उपसंहार</h2>
+
+        <p>
+            शक्ति का सम्मान करना उचित है। कायरता को आदर्श बनाना भी उचित नहीं है।
+        </p>
+
+        <p>
+            लेकिन करुणा, मानवीय गरिमा और नैतिक साहस को केवल इसलिए कम मूल्यवान नहीं माना जा सकता क्योंकि वे हमेशा शक्ति के साथ उपस्थित नहीं होते।
+        </p>
+
+        <div class="insight-box">
+            <span class="label">सार</span>
+            <p>शायद एक परिपक्व समाज वह है जो शक्ति की आवश्यकता को समझता है, लेकिन शक्ति को अंतिम मूल्य नहीं मानता। वह वीरता का सम्मान करता है, पर करुणा को नहीं भूलता। वह सामर्थ्य का आदर करता है, पर मनुष्यता को उससे नीचे नहीं रखता।</p>
+        </div>
+
+        <p style="text-align:center; font-weight:500; font-size:1.05rem; color:#3b2610; margin-top:1.8rem;">
+            और शायद इसी संतुलन में सभ्यता की सबसे बड़ी आशा छिपी हुई है।
+        </p>
+
+        <!-- ─── Footer ──────────────────────────── -->
+        <footer class="article-footer">
+            <span class="tag">शक्ति</span>
+            <span class="tag">क्षमा</span>
+            <span class="tag">मनुष्यता</span>
+            <span class="tag">दर्शन</span>
+            <span class="tag">चिंतन</span>
+            <p style="margin-top:1rem;">© एक चिंतनशील प्रस्तुति • सर्वाधिकार सुरक्षित</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
